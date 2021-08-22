@@ -284,12 +284,3 @@ p.exp-org {
   /* margin-left: 40px; */
   /* white-space: break-spaces; */
 }
-
-/* SVG Animation Test */
-path {
-  /* stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 2s linear forwards;
-  stroke-dashoffset: 1000ms; */
-  transition: stroke-dashoffset 1000ms ease;
-}

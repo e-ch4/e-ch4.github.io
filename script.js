@@ -87,9 +87,43 @@ $(window).scroll(function() {
 
 
 // Load about content from about.html
-$('#about').load("about.html")
-$('#resume').load("resume.html")
-$('#contact').load("contact.html")
+
+// $('#resume').load("resume.html")
+// $('#contact').load("contact.html")
 
 // Testing animated svg
 // $('#ani-icon-lab').load("flask.html")
+
+Testing scroll magic
+var pageControl = new ScrollMagic.Controller();
+// var labScene = new ScrollMagic.Scene({
+//   triggerElement: '.flask-icon';
+//   duration: 200;
+// }).addTo(pageControl);
+
+function pathSetSVG ($el) {
+  var lineLength = $el[0].getTotalLength();
+  $el.css("stroke-dasharray", lineLength);
+  $el.css("stroke-dashoffset", lineLength);
+};
+
+// var elements = [
+//   "path#flask-outline", "path#flask-subline1", "path#subline2"
+// ];
+// elements.forEach(function(item, index, array) {
+//   pathSetSVG($(item));
+//   console.log(item);
+// });
+
+// var tween = new TimelineMax()
+
+// elements.forEach(function(item, index, array) {
+//   tween.add(TweenMax.to($(item), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+// });
+
+var $flaskOutline = $("path#flask-outline");
+var $flaskSubline1 = $("path#flask-subline1");
+var $flaskSubline2 = $("path#flask-subline2");
+
+var tween = new TimelineMax().add(TweenMax.to($flaskOutline, 0.9, {strokeDashofffset:0, ease:Linear.easeNone})).add(TweenMax.to($flaskSubline1, 0.1, {strokeDashofffset:0, ease:Linear.easeNone})).add(TweenMax.to($flaskSubline2, 0.1, {strokeDashofffset:0, ease:Linear.easeNone});)
+var iconScene = new ScrollMagic.Scene({triggerElement: "#flask-icon", duration: 200, tweenChanges: true}).setTween(tween).addTo(pageControl);
