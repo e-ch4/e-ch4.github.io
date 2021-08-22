@@ -48,9 +48,6 @@ to this section's matching END comment to see page-specific styles.
     U+FEFF, U+FFFD;
 }
 
-.divider {
-/*   height: 30vh; */
-}
 /******************************************************************************
 END Glitch hello-app default styles
 ******************************************************************************/
@@ -286,4 +283,13 @@ p.exp-org {
   padding-left: 40px;
   /* margin-left: 40px; */
   /* white-space: break-spaces; */
+}
+
+/* SVG Animation Test */
+path {
+  /* stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 2s linear forwards;
+  stroke-dashoffset: 1000ms; */
+  transition: stroke-dashoffset 1000ms ease;
 }

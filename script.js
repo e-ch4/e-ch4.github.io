@@ -90,3 +90,6 @@ $(window).scroll(function() {
 $('#about').load("about.html")
 $('#resume').load("resume.html")
 $('#contact').load("contact.html")
+
+// Testing animated svg
+// $('#ani-icon-lab').load("flask.html")
