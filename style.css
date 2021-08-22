@@ -24,7 +24,7 @@ to this section's matching END comment to see page-specific styles.
   --font-size: 25px;
   --font-size-title: 150px;
 
-  --bg-image-url: url("https://cdn.glitch.com/a3487884-48b3-476b-ade5-21009594ab7b%2Fbg_darkened.jpg?v=1622944776959");
+  --bg-image-url: url("/images/nicolas-thomas-unsplash.jpg");
 }
 
 /* html {
@@ -283,4 +283,8 @@ p.exp-org {
   padding-left: 40px;
   /* margin-left: 40px; */
   /* white-space: break-spaces; */
+}
+
+svg.icon {
+  width: 80px;
 }

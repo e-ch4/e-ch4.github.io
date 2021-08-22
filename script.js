@@ -3,23 +3,6 @@ This is your site JavaScript code - you can add interactivity and carry out proc
 - Initially the JS writes a message to the console, and rotates a button you can add from the README
 */
 
-// Print a message in the browser's dev tools console each time the page loads
-// Use your menus or right-click / control-click and choose "Inspect" > "Console"
-console.log("Hello 🌎");
-
-/* 
-Make the "Click me!" button rotate when the visitor clicks it:
-- First add the button to the page by following the "Next steps" in the README
-*/
-const btn = document.querySelector("button"); // Get the button from the page
-// Detect clicks on the button
-if (btn) {
-  btn.onclick = function() {
-    // The JS works in conjunction with the 'rotated' code in style.css
-    btn.classList.toggle("rotated");
-  };
-}
-
 // This is a single line JS comment
 /*
 This is a comment that can span multiple lines 
@@ -87,43 +70,44 @@ $(window).scroll(function() {
 
 
 // Load about content from about.html
-
-// $('#resume').load("resume.html")
-// $('#contact').load("contact.html")
+$('#about').load("about.html");
+$('#resume').load("resume.html")
+$('#contact').load("contact.html")
 
 // Testing animated svg
 // $('#ani-icon-lab').load("flask.html")
 
-Testing scroll magic
-var pageControl = new ScrollMagic.Controller();
-// var labScene = new ScrollMagic.Scene({
-//   triggerElement: '.flask-icon';
-//   duration: 200;
-// }).addTo(pageControl);
+// Testing scroll magic
+// var pageControl = new ScrollMagic.Controller();
+// // var labScene = new ScrollMagic.Scene({
+// //   triggerElement: '.flask-icon';
+// //   duration: 200;
+// // }).addTo(pageControl);
 
-function pathSetSVG ($el) {
-  var lineLength = $el[0].getTotalLength();
-  $el.css("stroke-dasharray", lineLength);
-  $el.css("stroke-dashoffset", lineLength);
-};
+// function pathSetSVG ($el) {
+//   var lineLength = $el[0].getTotalLength();
+//   $el.css("stroke-dasharray", lineLength);
+//   $el.css("stroke-dashoffset", lineLength);
+// };
 
-// var elements = [
-//   "path#flask-outline", "path#flask-subline1", "path#subline2"
-// ];
-// elements.forEach(function(item, index, array) {
-//   pathSetSVG($(item));
-//   console.log(item);
-// });
+// // var elements = [
+// //   "path#flask-outline", "path#flask-subline1", "path#subline2"
+// // ];
+// // elements.forEach(function(item, index, array) {
+// //   pathSetSVG($(item));
+// //   console.log(item);
+// // });
 
-// var tween = new TimelineMax()
+// // var tween = new TimelineMax()
 
-// elements.forEach(function(item, index, array) {
-//   tween.add(TweenMax.to($(item), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-// });
+// // elements.forEach(function(item, index, array) {
+// //   tween.add(TweenMax.to($(item), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+// // });
 
-var $flaskOutline = $("path#flask-outline");
-var $flaskSubline1 = $("path#flask-subline1");
-var $flaskSubline2 = $("path#flask-subline2");
+// var $flaskOutline = $("path#flask-outline");
+// var $flaskSubline1 = $("path#flask-subline1");
+// var $flaskSubline2 = $("path#flask-subline2");
 
-var tween = new TimelineMax().add(TweenMax.to($flaskOutline, 0.9, {strokeDashofffset:0, ease:Linear.easeNone})).add(TweenMax.to($flaskSubline1, 0.1, {strokeDashofffset:0, ease:Linear.easeNone})).add(TweenMax.to($flaskSubline2, 0.1, {strokeDashofffset:0, ease:Linear.easeNone});)
-var iconScene = new ScrollMagic.Scene({triggerElement: "#flask-icon", duration: 200, tweenChanges: true}).setTween(tween).addTo(pageControl);
+// var tween = new TimelineMax().add(TweenMax.to($flaskOutline, 0.9, {strokeDashofffset:0, ease:Linear.easeNone})).add(TweenMax.to($flaskSubline1, 0.1, {strokeDashofffset:0, ease:Linear.easeNone})).add(TweenMax.to($flaskSubline2, 0.1, {strokeDashofffset:0, ease:Linear.easeNone});)
+// var iconScene = new ScrollMagic.Scene({triggerElement: "#flask-icon", duration: 200, tweenChanges: true}).setTween(tween).addTo(pageControl);
+
