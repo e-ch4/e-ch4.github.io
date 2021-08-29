@@ -66,6 +66,14 @@ $(window).scroll(function() {
       $(this).css("opacity", 1);
     }
   });
+
+  // $(".outline").each(function() {
+  //   if ($w.scrollTop() <= $(this).offset().top + $w.height()) {
+  //     var $len = $(this).getTotalLength();
+  //     var percent = ($w.scrollTop() + $w.height - $(this).offset().top)/ $len;
+  //     $(this).css("stroke-dashoffset", percent * $len)
+  //   }
+  // })
 });
 
 
@@ -73,7 +81,6 @@ $(window).scroll(function() {
 $('#about').load("about.html");
 $('#resume').load("resume.html")
 $('#contact').load("contact.html")
-
 // Testing animated svg
 // $('#ani-icon-lab').load("flask.html")
 
