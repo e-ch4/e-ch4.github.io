@@ -84,10 +84,9 @@ function getSVGPaths() {
 // console.log('found svg');
 // const scrollPaths = scrollElement.querySelectorAll(".js-scroll");
 
-
 function elementInView(el, offset = 0) {
     var elementBot = el.getBoundingClientRect().bottom;
-    return Boolean(elementBot <= window.innerHeight - offset);
+    return Boolean(elementBot <= window.innerHeight - offset && elementBot > scrollOffset);
 }
 
 function displayScrollElement(scrollEl) {
