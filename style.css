@@ -197,6 +197,7 @@ hr {
   position:relative;
   margin-bottom:250px;
   margin-top: 80px;
+  padding-bottom: 100px;
 }
 
 a {
@@ -216,7 +217,7 @@ a {
   word-wrap: normal;
 /*   position: relative; */
 /*   height: auto; */
-  padding-bottom:100px;
+  /* padding-bottom:50px; */
   min-height: 40vh;
 }
 
@@ -285,6 +286,39 @@ p.exp-org {
   /* white-space: break-spaces; */
 }
 
-svg.icon {
-  width: 80px;
+path {
+  fill: none;
+  stroke: #000000;
+
 }
+
+path.draw {
+  stroke-dasharray: 1000;
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+
+.scrolled.draw {
+  animation: draw 5s linear forwards;
+  -webkit-animation: draw 5s linear forwards;
+  animation-play-state: running;
+  -webkit-animation-play-state: running;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes draw {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+} 
